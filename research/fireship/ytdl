@@ -1,0 +1,3 @@
+#!/bin/sh
+# current yt-dlp in an isolated uv env (system one is 2026.03.17 and fails YouTube's checks)
+exec ~/.local/bin/uv tool run --from 'yt-dlp[default]==2026.10.21' yt-dlp --no-update "$@"

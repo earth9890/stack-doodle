@@ -1,0 +1,110 @@
+[
+[
+"The language behind seventy percent of the web just shipped an emergency patch.",
+0.2,
+1.0,
+0.0
+],
+[
+"Two bugs let a stranger run code on your server with no password,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the people who found them had an AI sidekick.",
+0.7,
+1.0,
+0.0
+],
+[
+"This is P H P two Shell.",
+0.2,
+1.0,
+0.0
+],
+[
+"So what broke, who found it, and what do you run today?",
+0.7,
+1.0,
+0.0
+],
+[
+"Picture P H P as a kitchen. Bug one: it runs out of memory mid-order,",
+0.2,
+1.0,
+0.0
+],
+[
+"and cleanup trusts the half-made mess.",
+0.2,
+1.0,
+0.0
+],
+[
+"Bug two: a stale sticky note survives a cleared shelf, and a stranger gets to write it.",
+0.2,
+1.0,
+0.0
+],
+[
+"Now he's cooking on your counter.",
+0.7,
+1.0,
+0.0
+],
+[
+"Calif found it using OpenAI's model, and then Wiz found it again on its own.",
+0.2,
+1.0,
+0.0
+],
+[
+"The most expensive second opinion ever.",
+0.7,
+1.0,
+0.0
+],
+[
+"But OpenAI itself warns these tools can help attackers too,",
+0.2,
+1.0,
+0.0
+],
+[
+"and Amazon spotted an attack attempt four days before the fix.",
+0.7,
+1.0,
+0.0
+],
+[
+"The U K took thirty-two government services offline,",
+0.2,
+1.0,
+0.0
+],
+[
+"because the safest server is the one that's switched off.",
+0.7,
+1.0,
+0.0
+],
+[
+"So run P H P dash v, update to your branch's newest patch, and restart P H P F P M.",
+0.2,
+1.0,
+0.0
+],
+[
+"Updating WordPress alone will not fix it.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]

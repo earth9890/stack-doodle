@@ -1,0 +1,28 @@
+# big / regenerable
+**/renders/
+**/assets/*.wav
+**/assets/*.mp3
+**/snapshots/
+**/.hyperframes/
+**/node_modules/
+*.pyc
+__pycache__/
+.DS_Store
+# rejected ACE-Step takes (the chosen one is copied to assets/voice.wav) and local caches
+**/takes/
+.cache/
+*_prev.html
+**/*.nobadge.png
+# demucs stems (regenerable by tools/remix.py)
+**/assets/stems/
+# research material we may study but never publish (transcripts, downloaded videos, frames)
+research/**/private/
+tools/.cache/
+# their thumbnails and raw metadata (descriptions) stay local; the .md reports are ours
+research/fireship/thumbs/
+research/fireship/data/
+# regenerable / large
+**/voice.mp3
+**/assets/fonts/
+brand/voice-audition/
+**/lab/
