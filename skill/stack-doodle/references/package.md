@@ -7,6 +7,7 @@ Measured in `R/research/fireship/channel.md` §5–§8. Our versions of the rule
 - **Name the actor**: the company/product people know, first or second word. Measured (last 24 months): frontier-lab names in
   29 % of hits vs 9 % of flops; niche JS/web-tool names in 0 % of hits vs 26 % of flops (median 582 K vs 1.0 M).
 - 45–60 characters, a full sentence with a consequence ("X just did Y, and Z"); hits median 51 chars vs 41 for flops.
+  Hard cap 60 (ep02's live 68-char title truncates); no "| Stack Doodle" suffix.
 - One of the 5 is a question ("Did X just …?" — 15 % of hits vs 3 % of flops, small n).
 - No ellipsis by default (it's their house style and equally common in hits and flops). No claim the video can't pay off.
 - Doodled: search wording first ("What is DuckDB, and why is everyone switching?"); Shorts: a why/how question.
@@ -25,6 +26,7 @@ Reference: `episodes/01-php2shell/thumbnails/thumb-c.js` ("WEB CRACKED": glowing
 Make A (the claim) and B (the object: the logo/doodle as the hero) for every video.
 
 ## Description
+Channel setup (keywords, About, upload defaults, playlists, end screens): `R/research/channel-setup.md`.
 ```
 <Search line: what the video answers, in the words people type (check autocomplete with
  ~/videos/black-hole-life/seo/suggest.py "<seed>"). Only line above "...more".>
@@ -36,15 +38,33 @@ Sources:
 
 Chapters (videos ≥ 4 min): 0:00 … (≥ 3, each ≥ 10 s, from the # chapter: lines + clip times)
 
-#programming #<topic> #<ai|webdev|security>
+▶ More <series or topic playlist>: https://www.youtube.com/playlist?list=<id>
+▶ All Stack Doodle videos: https://www.youtube.com/playlist?list=PLS46fNkfJOIg
+▶ Subscribe: https://www.youtube.com/@stackdoodle?sub_confirmation=1
+
+#programming #<topic> #<webdev|security|…>
 ```
-No boilerplate blocks, no tag walls, no AI/TTS mentions. The sources block is our trust signal; keep it.
-Tags: ≤ 15, the searches people type + product names/spellings; end with "stack doodle".
+No boilerplate blocks beyond the three ▶ lines, no tag walls, no AI/TTS mentions. The sources block is our trust signal; keep it.
+Tags: ≤ 15, the searches people type + product names/spellings/CVE IDs; end with the base set `tech news, programming, stack doodle`.
 Pinned comment: one question that invites an opinion or experience ("Would you move a production app to X yet?").
+
+## Playlists (created 2026-11-04)
+Every video: All + its series + every topic shelf that fits. The "More" line uses the topic shelf if any, else the series.
+| Playlist | ID | "More" line |
+|---|---|---|
+| All Stack Doodle Videos | `PLS46fNkfJOIg` | (always 2nd line) |
+| Patch Notes: Tech News, Explained | `PLQqMXUwOKgjg` | `▶ More Patch Notes:` |
+| Postmortems: How Tech Broke | `PLCGcwKgtQ88g` | `▶ More Postmortems:` |
+| Security, Hacks & Breaches | `PLZh23h-GyC4g` | `▶ More security stories:` |
+Create "Doodled: Dev Tools & Concepts Explained", "Cheat Sheets", "Labs: We Tested It" with their first video; a company
+shelf (OpenAI / Google / …) once 3 videos share the company. Never create an empty playlist.
 
 ## Upload settings
 Category Science & Technology · Not made for kids · Altered/synthetic content: Yes (owner's standing choice) · Language
-English · Public only after the owner's OK in chat · thumbnail A, B kept for Test & Compare · end screen: latest + best.
+English · Licence Standard · default tags empty · Public only after the owner's OK in chat · thumbnail A, B kept for Test & Compare.
+End screen (last 10–15 s, the calm sign-off board): most recent + best for viewer + subscribe; import from the previous video.
+Cards: one where the script mentions an earlier story, one at ~70 % to the topic shelf. After Public: add to playlists
+(`studio.youtube.com/video/<id>/edit` → Playlists → Save), log the line in `R/uploads.log`.
 Channel `UCJSjSUoVEvLZFoZSlZPbGzw`; check which Google account owns it on the first upload (Studio avatar → switch account)
 and write it in the repo README.
 

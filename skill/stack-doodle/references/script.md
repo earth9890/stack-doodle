@@ -33,6 +33,13 @@ Base rules still apply: `S/references/script-writer.md` (Joke Law: every joke is
 6. A turn at 72–88 %: "But…" / "Here's the part the launch post skips…". Answer the title with evidence.
 7. Landing: one practical line for the viewer ("if you're on X, do Y by Z"), callback to the opening doodle, sign-off.
 
+## Beat moves borrowed from the cartoon-shorts method (method only)
+- **Escalation, each beat a little bigger:** 3–4 consequence beats, each topping the last (one key → eight keys → "four").
+- **Deadpan double line** right after the snap: "Luckily, … / Unluckily, …" or "The good news … / The bad news …".
+- **Don't narrate the picture:** the voice never says what the doodle already shows; it adds the fact or the joke.
+- **One everyday analogy** for the mechanism, then the consequence (the rule/patch it created), then the callback twist.
+- Mark the punch words with `# punch: <word>`: the animator puts `S.punch` / a reaction / a sound on them (motion v2 leads every word by 0.15 s).
+
 ## Jokes
 - Density: news 2–3 per minute spoken (+ visual gags on screen); explainers 1–2 spoken, 2–3 visual. Tag `[J]`.
 - Types that work (measured): deadpan understatement, industry roast (of a decision/company, punching up), self-deprecation

@@ -1,0 +1,542 @@
+[
+[
+"GitHub's keynote says all the software ever written is less than one percent of what's coming.",
+0.2,
+1.0,
+0.0
+],
+[
+"And they mean within the next five years.",
+0.7,
+1.0,
+0.0
+],
+[
+"Meanwhile, your pull request from Thursday is still waiting for a review.",
+0.2,
+1.0,
+0.0
+],
+[
+"So what changes for you next week?",
+0.7,
+1.0,
+0.0
+],
+[
+"At GitHub Universe in San Francisco, GitHub posted thirty-one changelog entries in a single day.",
+0.7,
+1.0,
+0.0
+],
+[
+"Workflow lockfiles, agentic workflows, issue artifacts, a moderate role, image generation, a prototyping tool called Replica,",
+0.2,
+1.08,
+0.0
+],
+[
+"and a security extension for the app.",
+0.7,
+1.08,
+0.0
+],
+[
+"We read the ones that matter, so you don't have to.",
+0.7,
+1.0,
+0.0
+],
+[
+"So here's what shipped versus what's only a preview,",
+0.2,
+1.0,
+0.0
+],
+[
+"the robot that can now approve your pull request,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the new bill that comes with all of it.",
+0.7,
+1.0,
+0.0
+],
+[
+"This is Patch Notes for Wednesday, November fourth.",
+0.7,
+1.0,
+0.0
+],
+[
+"The pitch, from GitHub's Jay Parikh, is that developers now orchestrate fleets of agents.",
+0.2,
+1.0,
+0.0
+],
+[
+"Completed work, not more code, is what matters.",
+0.7,
+1.0,
+0.0
+],
+[
+"To get there, GitHub stacked five robots into a ladder,",
+0.2,
+1.0,
+0.0
+],
+[
+"and each rung does a little more of your job than the last.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung one is Agent Merge, now built into pull requests on GitHub.",
+0.7,
+1.0,
+0.0
+],
+[
+"Click Watch and fix in the merge box.",
+0.2,
+1.0,
+0.0
+],
+[
+"When an Actions workflow fails or a merge conflict shows up,",
+0.2,
+1.0,
+0.0
+],
+[
+"Copilot opens a cloud environment and fixes it.",
+0.2,
+1.0,
+0.0
+],
+[
+"You can even turn it on for every pull request you open.",
+0.7,
+1.0,
+0.0
+],
+[
+"So the merge conflict between you and your coworker is now a robot's problem.",
+0.7,
+1.0,
+0.0
+],
+[
+"It needs a paid Copilot plan, and paired with auto-merge, the pull request can land by itself.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung two is code review Max, in public preview.",
+0.2,
+1.0,
+0.0
+],
+[
+"Lite and Balanced stay for everyday reviews.",
+0.2,
+1.0,
+0.0
+],
+[
+"Max runs several independent review agents on models from different providers,",
+0.2,
+1.0,
+0.0
+],
+[
+"then a referee agent settles their disagreements into one review.",
+0.7,
+1.0,
+0.0
+],
+[
+"GitHub says Max posted the highest F one score on ReviewBench for high-severity issues.",
+0.2,
+1.0,
+0.0
+],
+[
+"That's GitHub's own number, and we haven't tested it.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung three is the big one.",
+0.2,
+1.0,
+0.0
+],
+[
+"Copilot approvals are now generally available.",
+0.7,
+1.0,
+0.0
+],
+[
+"Copilot can approve your pull request,",
+0.2,
+1.0,
+0.0
+],
+[
+"and that approval counts toward your repository's required approvals.",
+0.7,
+1.0,
+0.0
+],
+[
+"It behaves like a human reviewer's approval.",
+0.2,
+1.0,
+0.0
+],
+[
+"Push one more commit, and the approval is dismissed.",
+0.7,
+1.0,
+0.0
+],
+[
+"Approvals are off by default, and admins choose which file paths Copilot is allowed to approve.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung four is Copilot Fusion, generally available on all Copilot plans.",
+0.2,
+1.0,
+0.0
+],
+[
+"You stop picking a model, and Fusion picks the models for each task.",
+0.7,
+1.0,
+0.0
+],
+[
+"An engineer at AT&T is quoted in the launch post with the most relatable reason this exists.",
+0.2,
+1.0,
+0.0
+],
+[
+"Developers picked a powerful model for a hard task,",
+0.2,
+1.0,
+0.0
+],
+[
+"and then forgot to switch back.",
+0.7,
+1.0,
+0.0
+],
+[
+"Think of a restaurant kitchen, where a head chef reads every ticket and picks the cook.",
+0.7,
+1.0,
+0.0
+],
+[
+"Easy orders go straight to one cook.",
+0.2,
+1.0,
+0.0
+],
+[
+"Harder ones go to the fast cook first.",
+0.2,
+1.0,
+0.0
+],
+[
+"If the plate fails the taste test, the senior cook takes over.",
+0.2,
+1.0,
+0.0
+],
+[
+"Or one cook makes it, and another tastes it before it leaves.",
+0.7,
+1.0,
+0.0
+],
+[
+"GitHub says Fusion Max scored sixty on the Artificial Analysis Coding Agent Index,",
+0.2,
+1.0,
+0.0
+],
+[
+"within two points of Claude Code on Opus five point five Max,",
+0.2,
+1.0,
+0.0
+],
+[
+"at about half the cost per task.",
+0.7,
+1.0,
+0.0
+],
+[
+"Remember the kitchen, it's coming back.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung five is Copilot Projects, in public preview in the Copilot app.",
+0.2,
+1.0,
+0.0
+],
+[
+"You give it a goal, the repos, the design mocks and the Slack threads,",
+0.2,
+1.0,
+0.0
+],
+[
+"and it runs as many agents as the work needs, in parallel.",
+0.7,
+1.0,
+0.0
+],
+[
+"It comes back with pull requests for you to review.",
+0.2,
+1.0,
+0.0
+],
+[
+"Which, conveniently, another robot can now approve.",
+0.7,
+1.0,
+0.0
+],
+[
+"The app's computer use, also in preview, can click through your desktop apps,",
+0.2,
+1.0,
+0.0
+],
+[
+"and it asks for your approval before it touches one.",
+0.7,
+1.0,
+0.0
+],
+[
+"There's also one boring change that matters more than it sounds.",
+0.2,
+1.0,
+0.0
+],
+[
+"Copilot cloud sessions and cloud sandboxes are now generally available on paid plans.",
+0.7,
+1.0,
+0.0
+],
+[
+"Start a task from your phone at standup, steer it from VS Code,",
+0.2,
+1.0,
+0.0
+],
+[
+"and check on it from the web at lunch.",
+0.7,
+1.0,
+0.0
+],
+[
+"The compute comes out of your Actions entitlement,",
+0.2,
+1.0,
+0.0
+],
+[
+"which is now one dollar-based pool instead of runner minutes.",
+0.2,
+1.0,
+0.0
+],
+[
+"Your builds and your agents now share a wallet.",
+0.7,
+1.0,
+0.0
+],
+[
+"All these robots need somewhere to run.",
+0.2,
+1.0,
+0.0
+],
+[
+"GitHub says it added four million CPU cores this year,",
+0.2,
+1.0,
+0.0
+],
+[
+"and it's moving to multiple Azure regions, finishing early next year.",
+0.7,
+1.0,
+0.0
+],
+[
+"And then the most Microsoft sentence of the week.",
+0.2,
+1.0,
+0.0
+],
+[
+"GitHub Copilot SDK is becoming Microsoft Copilot SDK.",
+0.2,
+1.0,
+0.0
+],
+[
+"And no immediate changes are required.",
+0.7,
+1.0,
+0.0
+],
+[
+"But here's the part the keynote gave one sentence.",
+0.7,
+1.0,
+0.0
+],
+[
+"GitHub Enterprise customers now get every Copilot feature without a separate subscription.",
+0.7,
+1.0,
+0.0
+],
+[
+"The good news is that Copilot is now included.",
+0.2,
+1.0,
+0.0
+],
+[
+"The bad news is that so is the meter.",
+0.7,
+1.0,
+0.0
+],
+[
+"Usage is metered from the very first request, and there's no included allowance to top up.",
+0.7,
+1.0,
+0.0
+],
+[
+"Fusion bills each model it calls at that model's standard rate,",
+0.2,
+1.0,
+0.0
+],
+[
+"and Max reviews take longer and burn more credits.",
+0.7,
+1.0,
+0.0
+],
+[
+"So let's go back to the kitchen.",
+0.2,
+1.0,
+0.0
+],
+[
+"You don't pay the chef, you pay every cook who touched the plate.",
+0.7,
+1.0,
+0.0
+],
+[
+"There's one safety net: code completion keeps working when the budget hits zero,",
+0.2,
+1.0,
+0.0
+],
+[
+"while chat, code review and cloud agents stop.",
+0.7,
+1.0,
+0.0
+],
+[
+"Anyone in an enterprise account without a GitHub Enterprise license gets Copilot Standalone at ten dollars a month each, with no monthly credits.",
+0.2,
+1.0,
+0.0
+],
+[
+"For now it's through sales only, and current self-serve plans are unaffected.",
+0.7,
+1.0,
+0.0
+],
+[
+"So, what do you do next week?",
+0.2,
+1.0,
+0.0
+],
+[
+"If you're on a paid plan, try Watch and fix on one ugly pull request.",
+0.7,
+1.0,
+0.0
+],
+[
+"If you're an admin, choose the file paths Copilot may approve before anyone flips the switch.",
+0.2,
+1.0,
+0.0
+],
+[
+"And set a budget alert, because the robots are on the meter now.",
+0.7,
+1.0,
+0.0
+],
+[
+"GitHub says the code so far is less than one percent of what's coming.",
+0.2,
+1.0,
+0.0
+],
+[
+"Your pull request from Thursday would still like a review.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]

@@ -1,0 +1,476 @@
+[
+[
+"Google just announced the strongest model it has ever built,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the first rule of Gemini four Carbon is that you can't use it.",
+0.7,
+1.0,
+0.0
+],
+[
+"On October twenty-eighth, Google called Carbon its strongest model,",
+0.2,
+1.0,
+0.0
+],
+[
+"with state-of-the-art cybersecurity and long-horizon skills.",
+0.7,
+1.0,
+0.0
+],
+[
+"It finds security holes in real software, proves they can be exploited, and writes the patch.",
+0.7,
+1.0,
+0.0
+],
+[
+"And for now, it only goes to a hand-picked group of cyber defenders.",
+0.2,
+1.0,
+0.0
+],
+[
+"Everyone else gets a very nice blog post.",
+0.7,
+1.0,
+0.0
+],
+[
+"So what can Carbon really do,",
+0.2,
+1.0,
+0.0
+],
+[
+"why would Google build its best model and then refuse to sell it,",
+0.2,
+1.0,
+0.0
+],
+[
+"and what does it change for you next week?",
+0.7,
+1.0,
+0.0
+],
+[
+"This is Patch Notes for Wednesday, November fourth.",
+0.7,
+1.0,
+0.0
+],
+[
+"Carbon arrived just two weeks after Gemini four Argon, the model Google rolled out to everyone in October.",
+0.7,
+1.0,
+0.0
+],
+[
+"Fun naming fact: argon comes from the Greek word for lazy, because it refuses to react with anything.",
+0.2,
+1.0,
+0.0
+],
+[
+"Carbon forms more compounds than every other element combined.",
+0.7,
+1.0,
+0.0
+],
+[
+"Long-horizon means it keeps working on one hard problem for a very long time.",
+0.2,
+1.0,
+0.0
+],
+[
+"Google says that inside its own teams, Carbon ran for days,",
+0.2,
+1.0,
+0.0
+],
+[
+"root-causing and patching subtle bugs across large codebases.",
+0.7,
+1.0,
+0.0
+],
+[
+"Days. Most of us lose interest in a bug after one stand-up meeting.",
+0.7,
+1.0,
+0.0
+],
+[
+"Here's the easiest way to picture it.",
+0.2,
+1.0,
+0.0
+],
+[
+"Think of a home inspector who doesn't just write crack in wall on a clipboard.",
+0.7,
+1.0,
+0.0
+],
+[
+"This one finds the crack, leans on the wall to prove it really moves,",
+0.2,
+1.0,
+0.0
+],
+[
+"and then fills the crack before you get home.",
+0.7,
+1.0,
+0.0
+],
+[
+"Step one, find. Google says Carbon scores eighty-eight point two percent on SEC-bench Pro,",
+0.2,
+1.0,
+0.0
+],
+[
+"a test of discovering real vulnerabilities in real software.",
+0.7,
+1.0,
+0.0
+],
+[
+"Step two, prove. On ExploitGym, which checks whether a found bug can become a working exploit,",
+0.2,
+1.0,
+0.0
+],
+[
+"Google reports fifty-four point eight percent.",
+0.7,
+1.0,
+0.0
+],
+[
+"Step three, fix. On CWE-bench, which turns a confirmed flaw into a working patch, Google says seventy-one percent.",
+0.7,
+1.0,
+0.0
+],
+[
+"And Google says its Chrome team saw Carbon make high-quality patches more than ten times better",
+0.2,
+1.0,
+0.0
+],
+[
+"than another lab's large frontier model, which Google very politely did not name.",
+0.7,
+1.0,
+0.0
+],
+[
+"On general smarts, the independent Artificial Analysis Intelligence Index puts Carbon first at fifty-nine,",
+0.2,
+1.0,
+0.0
+],
+[
+"one point ahead of Claude Opus five point five, and two ahead of G P T six Astra.",
+0.7,
+1.0,
+0.0
+],
+[
+"One point. Frontier A I is now a sport decided by photo finish.",
+0.7,
+1.0,
+0.0
+],
+[
+"Which brings us to the gate. The good news is that Carbon is state-of-the-art at writing exploits.",
+0.2,
+1.0,
+0.0
+],
+[
+"The bad news is that Carbon is state-of-the-art at writing exploits.",
+0.7,
+1.0,
+0.0
+],
+[
+"The skill that proves a bug is dangerous is exactly the skill an attacker needs.",
+0.2,
+1.0,
+0.0
+],
+[
+"And a prompt doesn't come with a badge.",
+0.7,
+1.0,
+0.0
+],
+[
+"So Google says it's taking a deliberate approach,",
+0.2,
+1.0,
+0.0
+],
+[
+"and that Carbon is in the U S government's voluntary pre-release testing process.",
+0.7,
+1.0,
+0.0
+],
+[
+"Access goes through Google's Fairwind Program.",
+0.2,
+1.0,
+0.0
+],
+[
+"According to Forbes, it works with more than six hundred fifty partners,",
+0.2,
+1.0,
+0.0
+],
+[
+"with governments, critical infrastructure and core tech platforms first in line.",
+0.7,
+1.0,
+0.0
+],
+[
+"Partners get background checks, must use phishing-resistant multi-factor login,",
+0.2,
+1.0,
+0.0
+],
+[
+"and can use Carbon for pen testing and malware analysis, but not for building malware.",
+0.7,
+1.0,
+0.0
+],
+[
+"It's a nightclub where the dress code is two-factor authentication.",
+0.7,
+1.0,
+0.0
+],
+[
+"One footnote matters here. Google says it ran the outside cyber benchmarks without guardrails,",
+0.2,
+1.0,
+0.0
+],
+[
+"so those scores describe the model with its refusals switched off.",
+0.7,
+1.0,
+0.0
+],
+[
+"And nearly all the cyber numbers come from Google's own testing,",
+0.2,
+1.0,
+0.0
+],
+[
+"with no independent reproduction yet, as Forbes points out.",
+0.7,
+1.0,
+0.0
+],
+[
+"Google also says Carbon cuts unsupported claims roughly in half compared to Argon.",
+0.7,
+1.0,
+0.0
+],
+[
+"Artificial Analysis measured something more interesting.",
+0.2,
+1.0,
+0.0
+],
+[
+"On its knowledge test, Carbon answers more questions correctly than Argon, fifty-eight percent versus forty-eight.",
+0.7,
+1.0,
+0.0
+],
+[
+"But its hallucination rate went up too, from four percent to eleven.",
+0.2,
+1.0,
+0.0
+],
+[
+"It knows more, and it's more confident about the things it doesn't.",
+0.7,
+1.0,
+0.0
+],
+[
+"To be fair, it still tops that whole test. Fifty-four points, the best of any model they've measured.",
+0.7,
+1.0,
+0.0
+],
+[
+"And Artificial Analysis says it's still behind Claude Opus five point five at programming.",
+0.2,
+1.0,
+0.0
+],
+[
+"So the best model in the world is not the best model at everything.",
+0.7,
+1.0,
+0.0
+],
+[
+"Google even published a price: two dollars per million input tokens and ten per million output, the same as Argon,",
+0.2,
+1.0,
+0.0
+],
+[
+"rising to four and twenty after an introductory period with no announced end date.",
+0.7,
+1.0,
+0.0
+],
+[
+"So there's an introductory price for a model you can't buy yet.",
+0.7,
+1.0,
+0.0
+],
+[
+"Google isn't the first to do this.",
+0.2,
+1.0,
+0.0
+],
+[
+"Forbes notes Anthropic took the same route with its Mythos Preview model and a partner program called Glasswing.",
+0.2,
+1.0,
+0.0
+],
+[
+"That makes two frontier labs whose strongest cyber model skipped the public.",
+0.7,
+1.0,
+0.0
+],
+[
+"But here's the part the launch post skips.",
+0.2,
+1.0,
+0.0
+],
+[
+"A model that finds bugs faster than your team can review them doesn't remove the bottleneck.",
+0.2,
+1.0,
+0.0
+],
+[
+"As Forbes puts it, it moves the bottleneck to triage, the humans who confirm and ship each fix.",
+0.7,
+1.0,
+0.0
+],
+[
+"And the gate has holes of its own.",
+0.2,
+1.0,
+0.0
+],
+[
+"A WorkOS analysis, cited by Forbes, says the vetting is a one-time check,",
+0.2,
+1.0,
+0.0
+],
+[
+"access goes to companies while misuse comes from individual people,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the partner list is private, so no partner knows who else is inside.",
+0.7,
+1.0,
+0.0
+],
+[
+"So the bouncer checks your I D once, and nobody is allowed to see the guest list.",
+0.7,
+1.0,
+0.0
+],
+[
+"So, what do you do with this next week?",
+0.2,
+1.0,
+0.0
+],
+[
+"One: if you want Google's frontier model today, that's Argon,",
+0.2,
+1.0,
+0.0
+],
+[
+"already in A I Studio, the Gemini A P I and Google Cloud.",
+0.7,
+1.0,
+0.0
+],
+[
+"Two: if you're planning a budget for Carbon, plan for four and twenty, not the introductory two and ten.",
+0.7,
+1.0,
+0.0
+],
+[
+"Three: if you run a security team, the interest form is open,",
+0.2,
+1.0,
+0.0
+],
+[
+"but build your triage pipeline first, because the bugs will arrive faster than your reviewers.",
+0.7,
+1.0,
+0.0
+],
+[
+"Google's last model was named after the lazy gas.",
+0.2,
+1.0,
+0.0
+],
+[
+"This one is named after the element that bonds with everything, which is exactly why it's behind a rope.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]

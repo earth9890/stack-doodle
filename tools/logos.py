@@ -8,6 +8,8 @@ video talks about that product, never edited, mocked into a new mark, or used in
 Names match slug, title or alias (case-insensitive). A brand simple-icons dropped (OpenAI, Microsoft, AWS …) prints MISSING:
 show its name as text instead.
 """
+import utils.transport
+import utils.session
 import json, pathlib, re, sys, urllib.request
 
 VER = '16.34.0'  # pinned: published 2026-10-04

@@ -1,0 +1,536 @@
+[
+[
+"Hackers just found a way to run malware on your machine without you running anything.",
+0.2,
+1.0,
+0.0
+],
+[
+"You only have to open the folder.",
+0.7,
+1.0,
+0.0
+],
+[
+"And the file that does it is thirteen megabytes,",
+0.2,
+1.0,
+0.0
+],
+[
+"which is exactly why GitHub's own search thinks it's empty.",
+0.7,
+1.0,
+0.0
+],
+[
+"On October twenty-sixth, JFrog's security researchers reported forty-two real GitHub repositories from eleven owners,",
+0.2,
+1.0,
+0.0
+],
+[
+"booby-trapped by an npm worm called testmetest.",
+0.7,
+1.0,
+0.0
+],
+[
+"The traps are startup hooks for Claude Code, Gemini, Cursor and VS Code.",
+0.2,
+1.0,
+0.0
+],
+[
+"Open the project in one of them, and the hook can run the payload.",
+0.7,
+1.0,
+0.0
+],
+[
+"So how does opening a folder become running code,",
+0.2,
+1.0,
+0.0
+],
+[
+"why did the scanners see an empty file,",
+0.2,
+1.0,
+0.0
+],
+[
+"and what should you check before you open someone else's repo?",
+0.7,
+1.0,
+0.0
+],
+[
+"This is Patch Notes for Wednesday, November fourth.",
+0.7,
+1.0,
+0.0
+],
+[
+"It started on npm. Between October nineteenth and twenty-fifth, SafeDep spotted eighteen packages from one operator,",
+0.2,
+1.0,
+0.0
+],
+[
+"all with testmetest in the name.",
+0.7,
+1.0,
+0.0
+],
+[
+"On October twenty-second, SafeDep's verdict was reassuring:",
+0.2,
+1.0,
+0.0
+],
+[
+"all observed activity belonged to the operator's own test accounts.",
+0.7,
+1.0,
+0.0
+],
+[
+"A malware author, testing their malware, on their own accounts.",
+0.2,
+1.0,
+0.0
+],
+[
+"Honestly, that's more Q A than most of us do.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then JFrog looked closer. The good news: the test had no victims. The bad news: it wasn't a test.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung one is the boring one. The worm steals credentials,",
+0.2,
+1.0,
+0.0
+],
+[
+"the GitHub and npm tokens sitting on a developer's laptop.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung two: with a stolen token, it can commit to every repo that token reaches.",
+0.2,
+1.0,
+0.0
+],
+[
+"JFrog says the history was forged too.",
+0.2,
+1.0,
+0.0
+],
+[
+"Old commit messages and dates were copied from real projects.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung three: each commit adds a few tiny config files, one per tool,",
+0.2,
+1.0,
+0.0
+],
+[
+"and one giant script hiding in the dot github folder.",
+0.7,
+1.0,
+0.0
+],
+[
+"A startup hook is a command your tool runs by itself when a session starts or a folder opens.",
+0.2,
+1.0,
+0.0
+],
+[
+"It exists so a project can set itself up for you.",
+0.7,
+1.0,
+0.0
+],
+[
+"So a developer clones the repo and opens it,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the tool politely runs the attacker's script.",
+0.2,
+1.0,
+0.0
+],
+[
+"That's what the project told it to do.",
+0.7,
+1.0,
+0.0
+],
+[
+"One analyst, Aman Mahapatra, summed it up in one line:",
+0.2,
+1.0,
+0.0
+],
+[
+"dot claude slash settings dot json is the new autorun dot I N F.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the old Windows file that told a disc which program to start when you put it in.",
+0.2,
+1.0,
+0.0
+],
+[
+"We spent years teaching computers not to do that.",
+0.7,
+1.0,
+0.0
+],
+[
+"And the script's job is to make more of itself.",
+0.2,
+1.0,
+0.0
+],
+[
+"JFrog says it carries a publisher built to run in GitHub Actions.",
+0.2,
+1.0,
+0.0
+],
+[
+"It uses npm tokens to push new malicious releases.",
+0.7,
+1.0,
+0.0
+],
+[
+"Packages poison repos, and repos publish packages.",
+0.2,
+1.0,
+0.0
+],
+[
+"It's a supply chain with a subscription plan.",
+0.7,
+1.0,
+0.0
+],
+[
+"Now the clever part, and it isn't clever code. It's a big file.",
+0.7,
+1.0,
+0.0
+],
+[
+"GitHub's own docs say code search skips files over three hundred fifty kibibytes.",
+0.2,
+1.0,
+0.0
+],
+[
+"This one was about forty times bigger.",
+0.7,
+1.0,
+0.0
+],
+[
+"And for files over one megabyte, the contents A P I, in one of its formats,",
+0.2,
+1.0,
+0.0
+],
+[
+"hands back the content field as an empty string.",
+0.7,
+1.0,
+0.0
+],
+[
+"So JFrog's first sweep found the hooks in twenty-six repos, pointing at scripts that looked empty.",
+0.2,
+1.0,
+0.0
+],
+[
+"In JFrog's own words: that conclusion was wrong.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then they stopped searching and read the git trees directly, file by file,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the count went to forty-two.",
+0.7,
+1.0,
+0.0
+],
+[
+"Think of an airport scanner that waves through any suitcase too big to fit in the machine.",
+0.2,
+1.0,
+0.0
+],
+[
+"You don't need to hide anything. You just need a bigger suitcase.",
+0.7,
+1.0,
+0.0
+],
+[
+"Or as Mahapatra put it, the attacker read the documentation for your detection tooling",
+0.2,
+1.0,
+0.0
+],
+[
+"and padded the file past its limits.",
+0.7,
+1.0,
+0.0
+],
+[
+"JFrog found ten different versions of that file, from twelve point nine to thirteen point seven megabytes,",
+0.2,
+1.0,
+0.0
+],
+[
+"and unpacked, all ten were the same two megabyte payload.",
+0.7,
+1.0,
+0.0
+],
+[
+"Here's the boring tool that sees it. We made a throwaway repo with a dummy file the same size,",
+0.2,
+1.0,
+0.0
+],
+[
+"and git ls-tree printed thirteen point seven million bytes in one line.",
+0.7,
+1.0,
+0.0
+],
+[
+"Search can skip a file. Git can't.",
+0.7,
+1.0,
+0.0
+],
+[
+"The newest npm builds went further. They hide the loader in a compiled add-on,",
+0.2,
+1.0,
+0.0
+],
+[
+"and it checks where it's running before it does anything.",
+0.7,
+1.0,
+0.0
+],
+[
+"Inside a C I runner, a container, a tiny virtual machine, or under a debugger, it quietly does nothing.",
+0.2,
+1.0,
+0.0
+],
+[
+"On a real laptop, it wakes up.",
+0.7,
+1.0,
+0.0
+],
+[
+"It's shy around scanners and very outgoing on laptops.",
+0.7,
+1.0,
+0.0
+],
+[
+"And if you find it and revoke the stolen token, The Register says it can wipe your home directory. It takes being revoked personally.",
+0.2,
+1.0,
+0.0
+],
+[
+"So the cleanup guides give an order: remove its persistence first, then revoke.",
+0.7,
+1.0,
+0.0
+],
+[
+"But here's the part the scary headlines skip.",
+0.2,
+1.0,
+0.0
+],
+[
+"GitHub itself wasn't breached, and these hooks aren't bugs.",
+0.7,
+1.0,
+0.0
+],
+[
+"Analyst Frank Dickson put it fairly: these hooks are features, not flaws.",
+0.2,
+1.0,
+0.0
+],
+[
+"The root cause here is stolen credentials, not the A I tools.",
+0.7,
+1.0,
+0.0
+],
+[
+"And nobody knows yet how many laptops opened one of these repos.",
+0.2,
+1.0,
+0.0
+],
+[
+"Heise reports it's unclear how many computers ran the malware.",
+0.7,
+1.0,
+0.0
+],
+[
+"What changed is the moment of danger.",
+0.2,
+1.0,
+0.0
+],
+[
+"It used to be when you installed something. Now it's when you open it.",
+0.7,
+1.0,
+0.0
+],
+[
+"So, three checks before you open the next stranger's repo.",
+0.2,
+1.0,
+0.0
+],
+[
+"One: if you don't know a repo, don't trust it yet.",
+0.7,
+1.0,
+0.0
+],
+[
+"VS Code's own docs say, when in doubt, leave a folder in Restricted Mode,",
+0.2,
+1.0,
+0.0
+],
+[
+"and that also turns agents off in that workspace.",
+0.2,
+1.0,
+0.0
+],
+[
+"Give every coding agent's trust prompt the same answer.",
+0.7,
+1.0,
+0.0
+],
+[
+"Two: look in the dot folders first, in a plain file viewer.",
+0.2,
+1.0,
+0.0
+],
+[
+"Dot claude, dot gemini, dot cursor, dot vscode, and dot github.",
+0.7,
+1.0,
+0.0
+],
+[
+"If a script in there is thirteen megabytes,",
+0.2,
+1.0,
+0.0
+],
+[
+"it is not setting up your linter.",
+0.7,
+1.0,
+0.0
+],
+[
+"Three: if you own repos, don't audit with search alone. Read the tree.",
+0.2,
+1.0,
+0.0
+],
+[
+"And keep tokens scoped and short-lived. Every one of these started with a stolen token.",
+0.7,
+1.0,
+0.0
+],
+[
+"If you think you opened one, JFrog says treat it as a compromised machine,",
+0.2,
+1.0,
+0.0
+],
+[
+"and rotate every credential on it, in the right order.",
+0.7,
+1.0,
+0.0
+],
+[
+"GitHub's search said that file was empty.",
+0.2,
+1.0,
+0.0
+],
+[
+"It was thirteen megabytes. The only thing empty was the search result.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]

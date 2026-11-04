@@ -1,0 +1,260 @@
+[
+[
+"The company whose job is proving websites are real had a secret key,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the key was the number four.",
+0.7,
+1.0,
+0.0
+],
+[
+"Not four digits. Four. Just the number you get by counting your fingers and stopping early.",
+0.7,
+1.0,
+0.0
+],
+[
+"So how does a certificate authority end up guarding the internet with a four? Let's open it up.",
+0.7,
+1.0,
+0.0
+],
+[
+"When your browser shows a padlock, it trusts a certificate,",
+0.2,
+1.0,
+0.0
+],
+[
+"and that certificate is signed by a company called a certificate authority.",
+0.7,
+1.0,
+0.0
+],
+[
+"That company's private key is the master stamp.",
+0.2,
+1.0,
+0.0
+],
+[
+"Whoever holds it can sign a certificate for any website, and your browser will believe it.",
+0.7,
+1.0,
+0.0
+],
+[
+"It's how your bank, your email and every payment page prove they're really them.",
+0.7,
+1.0,
+0.0
+],
+[
+"A proper key is a random three hundred eighty-four bit number,",
+0.2,
+1.0,
+0.0
+],
+[
+"with roughly a one followed by a hundred and fifteen zeros possible values.",
+0.7,
+1.0,
+0.0
+],
+[
+"e-Mudhra, an Indian certificate authority trusted by every major browser,",
+0.2,
+1.0,
+0.0
+],
+[
+"had eight of those keys. One was four. Others were fifty-six, one hundred fifteen, two hundred thirty-seven.",
+0.7,
+1.0,
+0.0
+],
+[
+"You could brute force that with a calculator from a cereal box.",
+0.7,
+1.0,
+0.0
+],
+[
+"According to e-Mudhra, the keys were made at a ceremony on April thirtieth, twenty twenty-five, using high-end hardware security modules.",
+0.7,
+1.0,
+0.0
+],
+[
+"A flaw in one step quietly produced a second set of weak keys,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the weak ones were the ones sent to the browsers.",
+0.7,
+1.0,
+0.0
+],
+[
+"Those certificates sat in browser trust lists for well over a year.",
+0.7,
+1.0,
+0.0
+],
+[
+"On October seventeenth, a researcher called Wayne was scanning public certificate data,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the numbers just jumped out.",
+0.7,
+1.0,
+0.0
+],
+[
+"To prove it, he signed a warning message with one of e-Mudhra's own keys.",
+0.2,
+1.0,
+0.0
+],
+[
+"Like finding a bank's master stamp on the pavement and stamping a note that says, you dropped this.",
+0.7,
+1.0,
+0.0
+],
+[
+"Researcher Scott Helme showed what that meant:",
+0.2,
+1.0,
+0.0
+],
+[
+"a forged certificate for a real payments site was accepted by curl, Python, Node, Go and Java.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then the internet did something fast for once.",
+0.2,
+1.0,
+0.0
+],
+[
+"Mozilla had a block within about three hours, Chrome the same day, Apple on the nineteenth, Microsoft on the twentieth.",
+0.7,
+1.0,
+0.0
+],
+[
+"e-Mudhra revoked the eight certificates and says they never issued certificates to real websites or users.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then came the statement. The company pointed out it had passed independent audits two years in a row.",
+0.7,
+1.0,
+0.0
+],
+[
+"Which is like a vault passing two inspections with the combination taped to the door.",
+0.7,
+1.0,
+0.0
+],
+[
+"It also said social media amplification brought scrutiny out of proportion,",
+0.2,
+1.0,
+0.0
+],
+[
+"since website certificates are about one percent of its revenue.",
+0.7,
+1.0,
+0.0
+],
+[
+"To be fair to social media,",
+0.2,
+1.0,
+0.0
+],
+[
+"it was mostly just repeating the number four.",
+0.7,
+1.0,
+0.0
+],
+[
+"The market had its own review.",
+0.2,
+1.0,
+0.0
+],
+[
+"The stock hit the twenty percent lower circuit on October twenty-first, and again the next day, about thirty-six percent down in two days.",
+0.7,
+1.0,
+0.0
+],
+[
+"e-Mudhra is now leaving the website certificate business,",
+0.2,
+1.0,
+0.0
+],
+[
+"and India's IT ministry set up a special team, calling the impact on Indian websites very limited.",
+0.7,
+1.0,
+0.0
+],
+[
+"Here's the catch. Revoking a certificate only works for software that checks, and plenty of older apps never do.",
+0.7,
+1.0,
+0.0
+],
+[
+"So update your browser and your operating system,",
+0.2,
+1.0,
+0.0
+],
+[
+"and if you ship code, update your runtimes and certificate bundles too.",
+0.7,
+1.0,
+0.0
+],
+[
+"The padlock survived because browsers moved in hours,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the lesson cost one company a lot more than four rupees.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]

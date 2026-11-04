@@ -1,0 +1,524 @@
+[
+[
+"The biggest crypto theft in history started with something you've probably done this year: a take-home coding assignment.",
+0.7,
+1.0,
+0.0
+],
+[
+"Binance says six point three four billion dollars in crypto left its wallets on October twenty-ninth,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the F B I says North Korea did it.",
+0.7,
+1.0,
+0.0
+],
+[
+"Luckily, Binance says it froze about two point eight five billion dollars of it.",
+0.2,
+1.0,
+0.0
+],
+[
+"Unluckily, that is the smaller half.",
+0.7,
+1.0,
+0.0
+],
+[
+"So how does a fake job become a six billion dollar heist,",
+0.2,
+1.0,
+0.0
+],
+[
+"why couldn't the world's biggest exchange just press stop,",
+0.2,
+1.0,
+0.0
+],
+[
+"and what should you never do on your work laptop?",
+0.7,
+1.0,
+0.0
+],
+[
+"A hot wallet is the internet-connected wallet an exchange uses to pay out your withdrawals fast.",
+0.7,
+1.0,
+0.0
+],
+[
+"Binance's hot wallets use M P C, multi-party computation.",
+0.2,
+1.0,
+0.0
+],
+[
+"The key is split into shares on separate machines, and the whole key never exists in one place.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's good security, because nobody can steal a key that doesn't exist.",
+0.2,
+1.0,
+0.0
+],
+[
+"Remember that sentence, it's coming back.",
+0.7,
+1.0,
+0.0
+],
+[
+"The attack didn't start in October. It started in June.",
+0.2,
+1.0,
+0.0
+],
+[
+"A wallet DevOps engineer searched for a popular AI coding tool.",
+0.2,
+1.0,
+0.0
+],
+[
+"The Homebrew download they installed was tampered with, and Reuters says it came from a search ad.",
+0.7,
+1.0,
+0.0
+],
+[
+"Binance caught it, replaced the laptop and rotated the credentials.",
+0.2,
+1.0,
+0.0
+],
+[
+"But the attackers had already learned who worked on the wallet team.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung one of the ladder: a list of names.",
+0.7,
+1.0,
+0.0
+],
+[
+"In September, Software Engineer B got a message on a real job platform",
+0.2,
+1.0,
+0.0
+],
+[
+"from a project director at a company that didn't exist.",
+0.7,
+1.0,
+0.0
+],
+[
+"First, an H R video interview, with a social profile full of personal photos to build trust.",
+0.2,
+1.0,
+0.0
+],
+[
+"Then a second interview, in a chat app, with the company's CEO.",
+0.7,
+1.0,
+0.0
+],
+[
+"The CEO was also fake, which honestly makes it the most realistic startup in the story.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then came the assignment: download this repo to your work computer, and set it up.",
+0.7,
+1.0,
+0.0
+],
+[
+"Setup ran the malicious code. Binance says it was a zero-day that its endpoint security didn't catch.",
+0.7,
+1.0,
+0.0
+],
+[
+"And here's the quiet part. It replaced pyenv, the tool that picks your Python version,",
+0.2,
+1.0,
+0.0
+],
+[
+"with a malicious copy sitting at the exact same path inside the Homebrew folder.",
+0.7,
+1.0,
+0.0
+],
+[
+"Same name. Same command. Same folder.",
+0.2,
+1.0,
+0.0
+],
+[
+"The only thing that changed was everything.",
+0.7,
+1.0,
+0.0
+],
+[
+"Every time the engineer used pyenv, it worked perfectly,",
+0.2,
+1.0,
+0.0
+],
+[
+"and according to Bitcoin Magazine, it also opened a line to the attackers.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung two: a laptop inside Binance.",
+0.7,
+1.0,
+0.0
+],
+[
+"On October twentieth, the attackers used an internal AI tool as a springboard,",
+0.2,
+1.0,
+0.0
+],
+[
+"and took control of two wallet engineers' computers, A and C.",
+0.7,
+1.0,
+0.0
+],
+[
+"On Engineer A's machine, they found a container deployment token.",
+0.2,
+1.0,
+0.0
+],
+[
+"A token is a password for robots, and this one could deploy containers inside Binance.",
+0.7,
+1.0,
+0.0
+],
+[
+"So yes, an AI tool was involved.",
+0.2,
+1.0,
+0.0
+],
+[
+"Not to write the attack. To give the attackers a tour of the building.",
+0.7,
+1.0,
+0.0
+],
+[
+"Rung three: a password for robots.",
+0.7,
+1.0,
+0.0
+],
+[
+"October twenty-ninth, a little after five p.m. U T C. They logged on to Engineer C's computer.",
+0.2,
+1.0,
+0.0
+],
+[
+"Then they used A's stolen token, deployed a container, and ran one script.",
+0.7,
+1.0,
+0.0
+],
+[
+"That script reached the wallet signing service, the machine that says yes to transactions.",
+0.2,
+1.0,
+0.0
+],
+[
+"Now Binance's own wallets would sign whatever the attackers asked.",
+0.7,
+1.0,
+0.0
+],
+[
+"At twenty oh five U T C, five hot wallets sent two hundred thirty-three million X R P out.",
+0.2,
+1.0,
+0.0
+],
+[
+"Four minutes. That's faster than most of us get a pull request approved.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then Solana and Optimism wallets sent about nine hundred seventy thousand SOL and forty-four million O P,",
+0.2,
+1.0,
+0.0
+],
+[
+"and then a Binance wallet sent eighteen thousand two hundred seventy bitcoin.",
+0.7,
+1.0,
+0.0
+],
+[
+"Binance got an internal alert for large transfers and paused withdrawals,",
+0.2,
+1.0,
+0.0
+],
+[
+"which should have been the end of the story.",
+0.7,
+1.0,
+0.0
+],
+[
+"But on Ethereum the attackers had one more trick, a feature called E I P seventy-seven oh two.",
+0.7,
+1.0,
+0.0
+],
+[
+"It lets a normal wallet hand its execution rights to a smart contract without giving away its key.",
+0.2,
+1.0,
+0.0
+],
+[
+"It was built for nice things, like batching payments or letting an app pay your fees.",
+0.7,
+1.0,
+0.0
+],
+[
+"Think of it as a power of attorney.",
+0.2,
+1.0,
+0.0
+],
+[
+"The account still belongs to you, but someone you named can now act for it.",
+0.7,
+1.0,
+0.0
+],
+[
+"Through the signing service, the attackers made about fifty signing transactions",
+0.2,
+1.0,
+0.0
+],
+[
+"and set up delegations to a contract they controlled.",
+0.2,
+1.0,
+0.0
+],
+[
+"The wallet signed every single one, because signing is its whole job.",
+0.7,
+1.0,
+0.0
+],
+[
+"Pausing withdrawals closed the bank's front counter.",
+0.2,
+1.0,
+0.0
+],
+[
+"But a power of attorney doesn't go through the counter.",
+0.7,
+1.0,
+0.0
+],
+[
+"To cancel it, the wallet has to sign a new authorization.",
+0.2,
+1.0,
+0.0
+],
+[
+"And this is where M P C bites, because there's no single key to grab.",
+0.2,
+1.0,
+0.0
+],
+[
+"Binance says it needed a special procedure, while the clock kept running.",
+0.7,
+1.0,
+0.0
+],
+[
+"Nobody can steal a key that doesn't exist.",
+0.2,
+1.0,
+0.0
+],
+[
+"Nobody can quickly use one either.",
+0.7,
+1.0,
+0.0
+],
+[
+"The last unauthorized transfer, about two thousand nine hundred sixty E T H, finalized at eleven fifty-six p.m.",
+0.2,
+1.0,
+0.0
+],
+[
+"At ten past midnight, a new authorization pointed the delegation at the zero address, and the door finally closed.",
+0.7,
+1.0,
+0.0
+],
+[
+"The F B I named the group TraderTraitor.",
+0.2,
+1.0,
+0.0
+],
+[
+"That's the same name it gave the one point five billion dollar Bybit hack in twenty twenty-five.",
+0.2,
+1.0,
+0.0
+],
+[
+"North Korea calls the accusation absurd.",
+0.7,
+1.0,
+0.0
+],
+[
+"Binance says it's covering the loss itself,",
+0.2,
+1.0,
+0.0
+],
+[
+"and that ninety-eight percent of the affected tokens are already replenished.",
+0.7,
+1.0,
+0.0
+],
+[
+"So users aren't out of pocket, according to Binance.",
+0.2,
+1.0,
+0.0
+],
+[
+"The exchange just lost about four Bybits.",
+0.7,
+1.0,
+0.0
+],
+[
+"And before anyone dunks on the engineers: this was a state-level campaign,",
+0.2,
+1.0,
+0.0
+],
+[
+"and Binance says it blocked fifty-seven others like it this year. The attackers only needed one.",
+0.7,
+1.0,
+0.0
+],
+[
+"So, four rules for the rest of us.",
+0.2,
+1.0,
+0.0
+],
+[
+"One: never run an interview assignment on your work machine. Use a throwaway V M or a spare computer.",
+0.7,
+1.0,
+0.0
+],
+[
+"Two: install tools from the official site, not the top search ad,",
+0.2,
+1.0,
+0.0
+],
+[
+"and check where an install script came from before you run it.",
+0.7,
+1.0,
+0.0
+],
+[
+"Three: tokens should be scoped and short-lived.",
+0.2,
+1.0,
+0.0
+],
+[
+"A token that can reach the wallets should expire before lunch.",
+0.7,
+1.0,
+0.0
+],
+[
+"Four: if you run wallets on Ethereum, watch for delegations.",
+0.2,
+1.0,
+0.0
+],
+[
+"A new E I P seventy-seven oh two authorization on a hot wallet should wake someone up.",
+0.7,
+1.0,
+0.0
+],
+[
+"The recruiter was fake, the CEO was fake, the job was fake.",
+0.2,
+1.0,
+0.0
+],
+[
+"The only real thing in the whole hiring process was the assignment.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]

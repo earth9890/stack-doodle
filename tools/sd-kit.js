@@ -6,6 +6,7 @@
 // Colour names for chips etc: lime | pink | cyan | white | yellow (a raw "#hex" also works).
 //
 //  sd-bg       L.put(S, "sd-bg", 0, 0, { glow: "lime|cyan|pink|yellow|#hex", gx: 1500, gy: 400, gr: 700, vignette: true })        [0,0 = top-left, 1920x1080]
+//  L.sdBg     L.sdBg(S, "drift|glyphs|circuit|dots|scan|blob|network|grid", { c: "lime" (tint), c2 (blob), seed, speed: 1 })   animated ground, one per scene
 //  sd-chip     L.put(S, "sd-chip", x, y, { text: "WE RAN IT" (| = new line), c: "lime", size: 46, rot: -3, t, pop: true })          [c]
 //  sd-source   L.put(S, "sd-source", x, y, { site: "bun.sh/blog", head: "Bun 1.3 is out", body: ["line", "line"], hl: 1 (index or [i,j]),
 //                                            logo: "logo-bun", date: "OCT 22, 2026", w: 880, size: 36, t, slide: "up" })            [c]
@@ -87,6 +88,74 @@ L.reg("sd", "sd-bg", (o) => {
   return s;
 }, { box: [0, 0, 1920, 1080], group: "Frame", label: "Graphite grid ground", tags: ["background", "grid", "dark"],
   call: 'L.put(S, "sd-bg", 0, 0, { glow: "lime|cyan|pink|yellow|#hex", gx, gy, gr, vignette: true })', demo: { glow: "lime", gx: 1400, gy: 380 }, wide: true });
+
+// ---------- animated grounds (L.sdBg) ----------
+// L.sdBg(S, kind, { c: "lime|cyan|pink|yellow|#hex" (tint), seed, glow… }) = an animated graphite ground for one scene; the
+// motion is plain GSAP tweens on the paused timeline (seek-safe, no sound events), layouts come from a seeded PRNG.
+// kinds: grid (the old static sd-bg, default) | drift | glyphs | circuit | dots | scan | blob | network.
+// Calm by design: everything is 6-12 % brighter than the ground and moves 8-40 px/s. Rotate kinds per scene: the 0.6 s
+// scene crossfade blends one ground into the next.
+const prng = (seed) => () => ((seed = (seed * 16807) % 2147483647), (seed - 1) / 2147483646);
+const gridD = (step, x0, y0, x1, y1) => { let d = ""; for (let x = x0; x <= x1; x += step) d += `M${x} ${y0}V${y1}`; for (let y = y0; y <= y1; y += step) d += `M${x0} ${y}H${x1}`; return d; };
+const VIG = `<radialGradient id="sdvig" cx="0.5" cy="0.5" r="0.75"><stop offset="0.55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.35"/></radialGradient><rect x="-40" y="-40" width="2000" height="1160" fill="url(#sdvig)"/>`;
+const BGK = {
+  drift: (o) => `<g data-m="far"><path d="${gridD(60, -120, -120, 2400, 1560)}" stroke="${C.grid}" stroke-width="2" fill="none"/></g>`
+    + `<g data-m="near"><path d="${gridD(240, -480, -480, 2640, 1680)}" stroke="#272b34" stroke-width="3" fill="none"/></g>`,
+  glyphs: (o, r, tc) => { const G = ["{ }", "</>", "( )", "[ ]", "=>", ";", "&&", "#", "$", "01", "fn", "::", "!=", "//", "<>", "λ", "++", "{}"];
+    let s = `<path d="${gridD(60, -60, -60, 1980, 1140)}" stroke="${C.grid}" stroke-width="2" fill="none" opacity="0.5"/>`;
+    for (let i = 0; i < 26; i++) { const z = 0.4 + r() * 0.6, x = f1(r() * 1920), y = f1(-80 + r() * 1500), sz = f1(30 + z * 70);
+      s += `<text data-m="g${f1(z)}" x="${x}" y="${y}" font-family="Mono" font-weight="700" font-size="${sz}" fill="${i % 5 ? "#2c313b" : tc}" fill-opacity="${i % 5 ? 1 : 0.22}" text-anchor="middle">${G[Math.floor(r() * G.length)].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")}</text>`; }
+    return s; },
+  circuit: (o, r, tc) => { let base = "", hot = "", pads = "";
+    for (let i = 0; i < 16; i++) { let x = Math.round(r() * 32) * 60, y = Math.round(r() * 18) * 60, d = `M${x} ${y}`;
+      for (let k = 0; k < 4; k++) { const L1 = (2 + Math.floor(r() * 6)) * 60; if (k % 2) y += r() < 0.5 ? L1 : -L1; else x += r() < 0.5 ? L1 : -L1; d += `L${x} ${y}`; }
+      base += `<path d="${d}" stroke="#252a33" stroke-width="4" fill="none" stroke-linejoin="round"/>`;
+      hot += `<path data-m="p${f1(r())}" d="${d}" pathLength="1000" stroke="${tc}" stroke-opacity="0.32" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="70 930"/>`;
+      pads += `<circle cx="${x}" cy="${y}" r="9" fill="${C.bg}" stroke="#2c313b" stroke-width="4"/>`; }
+    return `<path d="${gridD(60, -60, -60, 1980, 1140)}" stroke="${C.grid}" stroke-width="2" fill="none" opacity="0.45"/>` + base + hot + pads; },
+  dots: () => { let d = ""; // rows already bent on a sine; the layer slides sideways, so the wave travels
+    for (let y = -40; y <= 1120; y += 40) for (let x = -40; x <= 2680; x += 40) { const yy = f1(y + 14 * Math.sin((x / 640) * 2 * Math.PI + y / 260)); d += `M${x} ${yy}h0.01`; }
+    return `<g data-m="wave"><path d="${d}" stroke="#30353f" stroke-width="5" stroke-linecap="round" fill="none"/></g>`; },
+  scan: (o, r, tc) => `<path d="${gridD(60, -60, -60, 1980, 1140)}" stroke="${C.grid}" stroke-width="2" fill="none" opacity="0.35"/>`
+    + `<path d="${Array.from({ length: 182 }, (_, i) => `M-40 ${i * 6}H1960`).join("")}" stroke="#1b1d23" stroke-width="2" fill="none"/>`
+    + `<linearGradient id="sdscan${tc.slice(1)}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${tc}" stop-opacity="0"/><stop offset="0.5" stop-color="${tc}" stop-opacity="0.07"/><stop offset="1" stop-color="${tc}" stop-opacity="0"/></linearGradient>`
+    + `<g data-m="band"><rect x="-40" y="-170" width="2000" height="340" fill="url(#sdscan${tc.slice(1)})"/></g>`,
+  blob: (o, r, tc) => { const t2 = col(o.c2 || "cyan"), gid = (c) => "sdb" + c.slice(1);
+    const grad = (c, a) => `<radialGradient id="${gid(c)}"><stop offset="0" stop-color="${c}" stop-opacity="${a}"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></radialGradient>`;
+    return grad(tc, 0.2) + grad(t2, 0.13) + `<g data-m="b0"><ellipse cx="1350" cy="380" rx="760" ry="540" fill="url(#${gid(tc)})"/></g>`
+      + `<g data-m="b1"><ellipse cx="520" cy="760" rx="680" ry="480" fill="url(#${gid(t2)})"/></g>`
+      + `<path d="${gridD(60, -60, -60, 1980, 1140)}" stroke="${C.grid}" stroke-width="2" fill="none" opacity="0.6"/>`; },
+  network: (o, r, tc) => { const N = []; for (let j = 0; j < 6; j++) for (let i = 0; i < 9; i++) N.push([f1(-200 + i * 290 + (r() - 0.5) * 170), f1(-120 + j * 270 + (r() - 0.5) * 150)]);
+    let e = "", pulses = "", nodes = "";
+    N.forEach((a, k) => [k + 1, k + 9, k + 10].forEach((m, q) => { const b = N[m]; if (!b || (q !== 1 && m % 9 === 0) || r() < 0.3) return;
+      e += `M${a[0]} ${a[1]}L${b[0]} ${b[1]}`; if (r() < 0.22) pulses += `<circle data-m="e${a[0]},${a[1]},${b[0]},${b[1]},${f1(r())}" cx="${a[0]}" cy="${a[1]}" r="6" fill="${tc}" fill-opacity="0.4"/>`; }));
+    N.forEach((a, k) => (nodes += `<circle cx="${a[0]}" cy="${a[1]}" r="${k % 7 ? 8 : 13}" fill="${C.bg}" stroke="${k % 7 ? "#2e3440" : tc}" stroke-opacity="${k % 7 ? 1 : 0.35}" stroke-width="4"/>`));
+    return `<g data-m="net"><path d="${e}" stroke="#242933" stroke-width="3" fill="none"/>${pulses}${nodes}</g>`; },
+};
+L.reg("sd", "sd-bg-anim", (o) => { const tc = col(o.c || "lime"), r = prng(o.seed || 11);
+  return L.flat(L.rect(-40, -40, 2000, 1160), C.bg) + `<g data-layout-allow-overlap="">${BGK[o.kind](o, r, tc)}</g>` + (o.vignette !== false ? VIG : ""); }, // background art: overlapping glyphs are intended
+{ box: [0, 0, 1920, 1080], group: "Frame", label: "Animated ground (use L.sdBg)", tags: ["background", "animated", "dark"],
+  call: 'L.sdBg(S, "drift|glyphs|circuit|dots|scan|blob|network|grid", { c: "lime", seed })', demo: { kind: "network", c: "cyan" }, wide: true });
+L.SD_BGS = Object.keys(BGK);
+L.sdBg = (S, kind = "grid", o = {}) => {
+  if (kind === "grid" || !BGK[kind]) return L.put(S, "sd-bg", 0, 0, o);
+  const g = L.put(S, "sd-bg-anim", 0, 0, Object.assign({}, o, { kind })), t0 = Math.max(0, S.start - 0.6), T = S.end - t0;
+  const q = (sel) => [...g.querySelectorAll(sel)], tr = (x, y, extra = "") => `translate(${f1(x)} ${f1(y)})${extra}`;
+  const lin = (e, x, y, extra) => tl.fromTo(e, { attr: { transform: tr(0, 0) } }, { attr: { transform: tr(x, y, extra) }, duration: T, ease: "none", immediateRender: false }, t0);
+  const sp = o.speed || 1;
+  if (kind === "drift") { lin(q('[data-m="far"]')[0], -10 * sp * T, -6 * sp * T); lin(q('[data-m="near"]')[0], -24 * sp * T, -14 * sp * T); }
+  if (kind === "glyphs") q("[data-m]").forEach((e) => { const z = +e.dataset.m.slice(1); lin(e, 0, -(10 + 30 * z) * sp * T); });
+  if (kind === "dots") lin(q('[data-m="wave"]')[0], -22 * sp * T, 0);
+  if (kind === "network") lin(q('[data-m="net"]')[0], -9 * sp * T, -5 * sp * T);
+  if (kind === "circuit") q("[data-m]").forEach((e) => { const ph = +e.dataset.m.slice(1);
+    tl.fromTo(e, { strokeDashoffset: 1000 * ph }, { strokeDashoffset: 1000 * ph - 1000, duration: 6 / sp, ease: "none", repeat: Math.ceil(T * sp / 6), immediateRender: false }, t0); });
+  if (kind === "scan") tl.fromTo(q('[data-m="band"]')[0], { attr: { transform: tr(0, -200) } }, { attr: { transform: tr(0, 1280) }, duration: 7 / sp, ease: "none", repeat: Math.ceil(T * sp / 7), immediateRender: false }, t0);
+  if (kind === "blob") [[-220, 120, 11], [260, -140, 9]].forEach(([dx, dy, p], i) =>
+    tl.fromTo(q(`[data-m="b${i}"]`)[0], { attr: { transform: tr(0, 0) } }, { attr: { transform: tr(dx, dy) }, duration: p / 2 / sp, ease: "sine.inOut", yoyo: true, repeat: Math.ceil(T * sp / (p / 2)), immediateRender: false }, t0));
+  if (kind === "network") q("circle[data-m]").forEach((e) => { const [ax, ay, bx, by, ph] = e.dataset.m.slice(1).split(",").map(Number), d = 2.6 / sp;
+    tl.fromTo(e, { attr: { cx: ax, cy: ay } }, { attr: { cx: bx, cy: by }, duration: d, ease: "sine.inOut", repeat: Math.ceil(T / d), delay: ph * d, immediateRender: false }, t0); });
+  return g;
+};
 
 // ---------- chip ----------
 L.reg("sd", "sd-chip", (o) => {

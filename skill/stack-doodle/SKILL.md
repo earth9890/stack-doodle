@@ -14,7 +14,8 @@ the content**: no Fireship script, joke, catchphrase, sign-off, "in 100 Seconds"
 house style, cream+red palette, flame, thumbnail grid or stick-figure-comic Shorts look.
 
 **Pipeline:** Topic → Format → Research (`research.md`, `sources.md`) → Script (owner OK) → Voice (owner OK on the first
-episodes) → Scenes → QA → Render → Package → Upload (owner OK).
+episodes) → Scenes → **Sound + Render** (`finish.sh … sound`, after the picture timing is locked) → QA (`QA=1`) → Package →
+Upload (owner OK).
 **Owner gates (standing rules):** a new format starts as a ~1-min trial; owner approves the script text, then the voice,
 before visuals. Publishing needs an explicit OK in chat every time.
 
@@ -25,6 +26,7 @@ before visuals. Publishing needs an explicit OK in chat every time.
 | **Researching a new tech thing** (source ladder, freshness, hype filter, hands-on check, `sources.md`, safety for hacks/leaks/allegations) | `references/research.md` |
 | **Writing the script** (voice, pace, jokes, skepticism devices, markup for VoiceStudio, numbers as words, lint) | `references/script.md` |
 | **Visuals** (look, palette, grid background, cast, chips, code panes, logos, evidence cards, pace without flicker, scene recipes) | `references/visuals.md` |
+| **Sound** (SFX on every visual beat, music bed ducked under the voice, −14 LUFS) and the QA gate | `references/visuals.md` §Motion and sound |
 | Title, thumbnail, description, tags, chapters, upload settings, cadence | `references/package.md` + `S/references/thumbnail-pro.md` |
 | Titles must be dramatic but true (owner 2026-10-22: "PHP patched two critical flaws" → "AI just found a hole in 70% of the internet") | `references/package.md` |
 | Upload mechanics in Studio (dialog, thumbnail, checks, pinned comment) | `S/references/youtube-upload.md` + the BHL notes in memory |
@@ -62,6 +64,9 @@ python3 $R/tools/logos.py $E/assets/logos.js bun node.js deno        # MISSING �
 python3 $S/scripts/lib.py find <words>   /   lib.py show <name>      # dev assets: lib.py groups dev
 python3 $S/scripts/scene_lint.py $E/scenes.js && python3 $S/scripts/lib.py check $E/scenes.js && python3 $S/scripts/build.py $E
 python3 $S/scripts/thumb_hires.py $E thumbnails/thumb-a.js thumbnails/a.png   # after the pro pass (S/references/thumbnail-pro.md)
-RES=1080 lockf -t 3000 ~/videos/black-hole-life/.heavy.lock $S/scripts/finish.sh $E none $E/renders/NN-slug-1080p.mp4
+# sound + render in one step, AFTER the picture is final (re-run on any timing change): engine sound.py = SFX from the
+# motion-v2 event table + synth bed ducked under the words, -14 LUFS, stems, assets/cues.md; QA=1 = frame_qa.py every-frame check
+RES=1080 QA=1 SOUND_ARGS="--extra scene,glide,move" lockf -t 3000 ~/videos/black-hole-life/.heavy.lock $S/scripts/finish.sh $E sound $E/renders/NN-slug-1080p.mp4
+# SD default extras = crossfade/glide/move whooshes; add "--music none" | "--sfx-db -4" | "--music-lu 16"; trial clip: build, sound.py, build, then hyperframes render --start/--end
 ```
-`scenes.js` header for this channel: `// look: still` · `// captions: off` · `// @library auto` · `// @include ../../tools/sd-kit.js` · `// @include assets/logos.js`.
+`scenes.js` header for this channel: `// look: still` · `// motion: v2` · `// captions: off` · `// @library auto` · `// @include ../../tools/sd-kit.js` · `// @include assets/logos.js`.

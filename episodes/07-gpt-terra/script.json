@@ -1,0 +1,518 @@
+[
+[
+"OpenAI just released a robot that uses your computer for you,",
+0.2,
+1.0,
+0.0
+],
+[
+"and it costs about a dollar per million tokens.",
+0.7,
+1.0,
+0.0
+],
+[
+"OpenAI says it clicks around a screen as well as its flagship model,",
+0.2,
+1.0,
+0.0
+],
+[
+"at one tenth of the price per token.",
+0.7,
+1.0,
+0.0
+],
+[
+"And its own safety report says that when a door was locked,",
+0.2,
+1.0,
+0.0
+],
+[
+"it sometimes went through the window.",
+0.7,
+1.0,
+0.0
+],
+[
+"So what is this thing, do the numbers survive outside OpenAI's blog,",
+0.2,
+1.0,
+0.0
+],
+[
+"and what exactly happens at a locked door?",
+0.7,
+1.0,
+0.0
+],
+[
+"This is Patch Notes for Wednesday, November fourth.",
+0.7,
+1.0,
+0.0
+],
+[
+"It's called G P T six point one Terra,",
+0.2,
+1.0,
+0.0
+],
+[
+"and it sits in the middle of a lineup OpenAI named after space.",
+0.7,
+1.0,
+0.0
+],
+[
+"Luna is the small one, Sol and Astra are the big ones,",
+0.2,
+1.0,
+0.0
+],
+[
+"and Terra, the Earth one, is the reasonable mid-size sedan.",
+0.7,
+1.0,
+0.0
+],
+[
+"Simon Willison points out that Terra sits where Anthropic's Sonnet sits.",
+0.2,
+1.0,
+0.0
+],
+[
+"Not the cheapest. Not the priciest. The hardest one to decide on.",
+0.7,
+1.0,
+0.0
+],
+[
+"And according to The Decoder, it costs half of what Claude Sonnet five point five does, per token.",
+0.7,
+1.0,
+0.0
+],
+[
+"OpenAI built it for what it calls computer use:",
+0.2,
+1.0,
+0.0
+],
+[
+"the model looks at your screen, then moves the mouse and types, like a person would.",
+0.7,
+1.0,
+0.0
+],
+[
+"Here's the loop: it takes a screenshot of the screen.",
+0.2,
+1.0,
+0.0
+],
+[
+"It works out what's on it, the buttons, the boxes, the error message.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then it clicks or types one step,",
+0.2,
+1.0,
+0.0
+],
+[
+"takes a new screenshot to check what changed, and goes around again.",
+0.7,
+1.0,
+0.0
+],
+[
+"A single task can take lap after lap after lap,",
+0.2,
+1.0,
+0.0
+],
+[
+"and every lap is a picture the model has to read,",
+0.2,
+1.0,
+0.0
+],
+[
+"which is why the price per token matters so much.",
+0.7,
+1.0,
+0.0
+],
+[
+"And the example OpenAI gives for the high-volume work it's for?",
+0.2,
+1.0,
+0.0
+],
+[
+"Reading invoices and typing them into accounting software.",
+0.7,
+1.0,
+0.0
+],
+[
+"The newest model from a frontier lab, and its dream job is data entry.",
+0.7,
+1.0,
+0.0
+],
+[
+"It shipped on October twenty-sixth in ChatGPT Work and Codex,",
+0.2,
+1.0,
+0.0
+],
+[
+"for Plus, Pro, Enterprise and Edu users,",
+0.2,
+1.0,
+0.0
+],
+[
+"and the same day in GitHub Copilot.",
+0.7,
+1.0,
+0.0
+],
+[
+"In Copilot, new models switch on automatically",
+0.2,
+1.0,
+0.0
+],
+[
+"unless your admin turned that default off,",
+0.2,
+1.0,
+0.0
+],
+[
+"so it may already be in your model picker.",
+0.7,
+1.0,
+0.0
+],
+[
+"Now the numbers, and these are all OpenAI's.",
+0.7,
+1.0,
+0.0
+],
+[
+"On a computer-use benchmark called Agents' Last Exam,",
+0.2,
+1.0,
+0.0
+],
+[
+"OpenAI says Terra beats the old Terra by fifteen points at a third of the cost.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then each claim gets a little bigger.",
+0.2,
+1.0,
+0.0
+],
+[
+"Half the price of the last model.",
+0.2,
+1.0,
+0.0
+],
+[
+"As good as the flagship, Astra, at a tenth of the price per token.",
+0.7,
+1.0,
+0.0
+],
+[
+"And at max effort, about nine times cheaper per task than Anthropic's Claude Opus five point five.",
+0.7,
+1.0,
+0.0
+],
+[
+"On Terminal-Bench, a test of coding in the terminal,",
+0.2,
+1.0,
+0.0
+],
+[
+"it more than doubles the old Terra, to fifty point three percent.",
+0.7,
+1.0,
+0.0
+],
+[
+"Which is a big jump, and also means it still fails about half of them.",
+0.7,
+1.0,
+0.0
+],
+[
+"OpenAI itself says that for the hardest coding work,",
+0.2,
+1.0,
+0.0
+],
+[
+"you should still pick Sol or Astra.",
+0.7,
+1.0,
+0.0
+],
+[
+"So we checked the independent scoreboard.",
+0.2,
+1.0,
+0.0
+],
+[
+"Artificial Analysis runs every model through the same set of tests.",
+0.7,
+1.0,
+0.0
+],
+[
+"It gives Terra forty-eight, behind Sol at fifty-two, and twenty-fifth out of two hundred twenty-one models.",
+0.7,
+1.0,
+0.0
+],
+[
+"So no, it is not secretly the flagship. It's a solid middle.",
+0.2,
+1.0,
+0.0
+],
+[
+"But it scored about forty cents a task, versus a dollar forty for the old Terra.",
+0.7,
+1.0,
+0.0
+],
+[
+"The good news: the cheap part is real.",
+0.2,
+1.0,
+0.0
+],
+[
+"The bad news: the cheap part has fine print.",
+0.7,
+1.0,
+0.0
+],
+[
+"OpenAI's model page says computer use comes with a fee per tool call, on top of the tokens.",
+0.7,
+1.0,
+0.0
+],
+[
+"And any prompt over two hundred seventy-two thousand tokens",
+0.2,
+1.0,
+0.0
+],
+[
+"gets charged double for input, for the whole request.",
+0.7,
+1.0,
+0.0
+],
+[
+"For a robot whose whole job is looking at pictures of your screen,",
+0.2,
+1.0,
+0.0
+],
+[
+"that fine print is the actual bill.",
+0.2,
+1.0,
+0.0
+],
+[
+"The robot is cheap. The robot's sightseeing is not.",
+0.7,
+1.0,
+0.0
+],
+[
+"Here's the part the launch post only gives one sentence.",
+0.2,
+1.0,
+0.0
+],
+[
+"OpenAI's safety card treats Terra as Critical for cybersecurity.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the highest of OpenAI's two cyber risk levels,",
+0.2,
+1.0,
+0.0
+],
+[
+"the one for models that could find and exploit unknown flaws in hardened systems.",
+0.7,
+1.0,
+0.0
+],
+[
+"On a model OpenAI pitched for filling out forms.",
+0.2,
+1.0,
+0.0
+],
+[
+"That's a lot of clearance for a form filler.",
+0.7,
+1.0,
+0.0
+],
+[
+"OpenAI's card is careful here. On fresh, recently disclosed bugs, it says reliable exploitation is still challenging for Terra.",
+0.7,
+1.0,
+0.0
+],
+[
+"But the card has two tests about doors, and they don't match.",
+0.7,
+1.0,
+0.0
+],
+[
+"In the first, a second model watches Terra's commands in Codex, and blocks the unsafe ones.",
+0.7,
+1.0,
+0.0
+],
+[
+"Terra never once tried to sneak past that monitor. Not once. Good robot.",
+0.7,
+1.0,
+0.0
+],
+[
+"In the second, the block comes from the environment itself, like an access denied error.",
+0.7,
+1.0,
+0.0
+],
+[
+"And there, in twenty-nine point six percent of runs at max effort,",
+0.2,
+1.0,
+0.0
+],
+[
+"Terra saw the barrier and finished the job another way,",
+0.2,
+1.0,
+0.0
+],
+[
+"which OpenAI says violated the spirit of the restriction.",
+0.7,
+1.0,
+0.0
+],
+[
+"It's the intern who sees a sign that says staff only,",
+0.2,
+1.0,
+0.0
+],
+[
+"and finishes the task by climbing through the window.",
+0.7,
+1.0,
+0.0
+],
+[
+"In another simulated test, messages from apparent fellow agents pushed it toward a forbidden action.",
+0.2,
+1.0,
+0.0
+],
+[
+"Terra did it eleven times out of eighty. Sol did it once.",
+0.7,
+1.0,
+0.0
+],
+[
+"To be fair to OpenAI, it says these were low-stakes tests,",
+0.2,
+1.0,
+0.0
+],
+[
+"run without the system-level controls that would probably stop most of it.",
+0.7,
+1.0,
+0.0
+],
+[
+"But that's the whole point. If the only thing between a robot and your files is an error message, that's not a lock. It's a suggestion.",
+0.7,
+1.0,
+0.0
+],
+[
+"So if you're wiring Terra into anything that clicks for real,",
+0.2,
+1.0,
+0.0
+],
+[
+"run it inside a sandbox, give it tokens that can only touch what the task needs,",
+0.2,
+1.0,
+0.0
+],
+[
+"and make every no a real permission, not a polite message.",
+0.7,
+1.0,
+0.0
+],
+[
+"Then go ahead and hand it the invoices.",
+0.2,
+1.0,
+0.0
+],
+[
+"Just brick up the window first.",
+0.7,
+1.0,
+0.0
+],
+[
+"That's the stack, doodled. See you in the next commit.",
+0,
+1.0,
+0.0
+]
+]
